@@ -1,0 +1,11 @@
+<!--item.wxml-->
+<template name="item">
+    <image class="book-cover" mode="aspectFit" src="{{images.small}}"></image>
+    <view class="book-info">
+        <text class="book-name">{{title}}</text>
+        <text class="book-rate">评分：{{rating.average}}</text>
+        <text class="book-author">作者：{{author}}</text>
+        <text class="book-publisher">出版社：{{publisher}}</text>
+        <text class="book-pubdate">出版日期：{{pubdate}}</text>
+    </view>
+</template>
