@@ -1,24 +1,23 @@
 /*search.wxss*/
+.container {
+  justify-content: flex-start;
+} 
 .search-input{
     width: 60%;
-    display: flex;
-    flex: row;
-    justify-content: space-between;
-    align-items: center;
     border:1rpx solid #cfcfcf;
     border-radius:10rpx;
     padding: 10rpx 15rpx;
 }
 .input-placeholder{
-    font-size: 12rpx;
+    font-size: 12px;
 }
 .recommend-container{
-    margin-top: 100rpx;
+    margin-top: 50px;
     align-self: flex-start; 
 }
 .recommend-title{
     padding-left: 50rpx;
-    font-size: 14rpx;
+    font-size: 14px;
     color: #999999;
 }
 .recommend-tag{   
@@ -33,8 +32,8 @@
     align-items: center;
     padding: 10rpx 20rpx;
     background: #e3e4e5;
-    font-size: 12rpx;
-    margin-left: 20rpx;
+    font-size: 12px;
+    margin-left: 10px;
     border-radius: 10rpx;
     color: #666666;
 }

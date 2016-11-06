@@ -2,16 +2,18 @@
 .container{
   padding:200rpx 10rpx;
 }
-
-.appname {
+.appinfo{
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
-
 .appinfo-logo {
-  width: 120rpx;
-  height: 120rpx;
+  width: 60px;
+  height: 60px;
   margin: 20rpx;
   border-radius: 50%;
   background-size: cover;
@@ -27,5 +29,5 @@
 }
 
 .toapp button{
-  font-size: 12rpx;
+  font-size: 14px;
 }

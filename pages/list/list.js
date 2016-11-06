@@ -2,16 +2,31 @@
 var request = require('../../request/request');
 Page({
   data:{
+    isTag: '',
+    query: '',
+    deviceHeight: 0,
     resultCondition: false,
     loadingHidden: false,
     modalHidden: true,
     modalValue: '',
-    items: []
+    items: [],
+    bottomCondition: false
   },
   onLoad:function(options){
-    var isTag = options.isTag;
-    var query = options.query;
-    request.searchBook(isTag, query, this.searchSuccess, this.searchFail);
+    var that = this;
+    // 设置scroll-view的高度为设备高度
+    wx.getSystemInfo({
+      success: function(res){
+        that.setData({
+          deviceHeight: res.windowHeight + 'px'
+        });
+      }
+    });
+    this.setData({
+      isTag: options.isTag,
+      query: options.query
+    });
+    request.searchBook(this.data.isTag, this.data.query, this.searchSuccess, this.searchFail);
   },
   // 搜索图书成功
   searchSuccess: function(data){
@@ -48,6 +63,25 @@ Page({
     this.setData({
       modalHidden: true,
       modalValue: ''
+    });
+  },
+  // 处理滚动事件
+  handleToBottom: function(e){
+    var that = this;
+    this.setData({
+      loadingHidden: false
+    });
+    request.getNextPage(this.data.isTag, this.data.query, function(data){
+      that.setData({
+        loadingHidden: true,
+        items: that.data.items.concat(data.books)
+      });
+    }, function(){
+      that.setData({
+        loadingHidden: true,
+        modalHidden: false,
+        modalValue: '搜索图书失败'
+      });
     });
   }
 })

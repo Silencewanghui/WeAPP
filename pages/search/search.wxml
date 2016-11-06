@@ -1,14 +1,9 @@
 <!--search.wxml-->
 <view class="container">
-    <!--消息提示框-->
-    <modal title="提示" confirm-text="确定" no-cancel hidden="{{modalHidden}}" bindconfirm="modalChange">
-        {{modalValue}}
-    </modal>
     <!--搜索框-->
-    <input type="text" class="search-input" placeholder="搜索你喜爱的图书吧" placeholder-class="input-placeholder" 
-        auto-focus value="{{inputValue}}" bindinput="handleInput">
-        <icon type="search" bindtap="searchBook" size="12" class="search-icon" />
-    </input>
+    <input type="text" class="search-input" placeholder="搜索你喜爱的图书吧" 
+        placeholder-class="input-placeholder" auto-focus value="{{inputValue}}" 
+        bindinput="handleInput" bindblur="searchBook" />    
     <!--推荐标签-->
     <view class="recommend-container">
         <text class="recommend-title">推荐标签</text>

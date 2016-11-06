@@ -10,7 +10,7 @@
     </loading>
     <!--图书封面banner-->
     <view class="book-banner">
-        <image class="book-cover" src="{{bookcover}}"></image>
+        <image class="book-cover" mode="scaleToFill" src="{{bookcover}}"></image>
     </view>
     <!--图书简要信息-->
     <view class="book-brief">

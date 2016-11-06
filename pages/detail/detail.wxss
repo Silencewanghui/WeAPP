@@ -8,7 +8,7 @@
     padding-bottom: 20rpx;
 }
 .book-banner{
-    height: 240px;
+    height: 500rpx;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +23,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 50rpx 40rpx;
+    margin-top: 50rpx;
 }
 .book-info{
     display: flex;
@@ -35,12 +36,12 @@
 }
 .book-author,.book-translator,.book-publisher,.book-pubdate{
     font-size: 12px;
-    margin-top: 7rpx;
+    margin-top: 10rpx;
     color: #666666;
 }
 .book-rate{
-    width: 130rpx;
-    height: 130rpx;
+    width: 160rpx;
+    height: 160rpx;
     box-shadow: 0 0 10px 1px #d2d4d8;
     background: #ffffff;
     display: flex;
@@ -57,7 +58,7 @@
     color: #999999;
 }
 .book-abstract,.author-abstract{
-    margin-top: 30rpx;
+    margin-top: 50rpx;
     display: flex;
     flex-direction: column;
     padding:0 30rpx;
@@ -69,5 +70,5 @@
 .abstract-content{
     margin-top: 20rpx;
     font-size: 13px;
-    line-height: 60rpx;
+    line-height: 80rpx;
 }

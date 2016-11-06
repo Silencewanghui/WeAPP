@@ -1,8 +1,6 @@
 // search.js
 Page({
   data:{
-    modalHidden: true,
-    modalValue: '',
     inputValue: '',
     isTag: false
   },
@@ -31,29 +29,17 @@ Page({
       inputValue: event.currentTarget.dataset.tag,
       isTag: true
     });
+    this.searchBook();
   },
   // 搜索图书
   searchBook: function(){
     var that = this;
     var value = this.data.inputValue.trim();
-    if(!value){
-      // 内容为空时激活提示框
-      this.setData({
-        modalHidden: false,
-        modalValue: '搜索内容不能为空！'  
-      });
-    }else{
-      wx.navigateTo({
+    if(value){
+       wx.navigateTo({
         url: '../list/list?isTag=' + that.data.isTag + 
               '&query=' + that.data.inputValue
-      });
+       });
     }
-  },
-  // 模态框确定事件处理
-  modalChange: function(e){
-    this.setData({
-      modalHidden: true,
-      modalValue: ''
-    });
   }
 })

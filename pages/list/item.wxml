@@ -1,6 +1,8 @@
 <!--item.wxml-->
 <template name="item">
-    <image class="book-cover" mode="aspectFit" src="{{images.small}}"></image>
+    <view class="book-cover">
+        <image class="book-image" mode="scaleToFill" src="{{images.medium}}"></image>
+    </view>
     <view class="book-info">
         <text class="book-name">{{title}}</text>
         <text class="book-rate">评分：{{rating.average}}</text>
