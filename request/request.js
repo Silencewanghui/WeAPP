@@ -38,7 +38,7 @@ function searchBook(isTag, query, successCb, failCb){
         });
     }
 }
-
+ 
 // 加载下一页
 function getNextPage(isTag, query, successCb, failCb){
     start += count;
